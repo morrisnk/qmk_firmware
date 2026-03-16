@@ -537,6 +537,9 @@ static void usb_event_cb(USBDriver *usbp, usbevent_t event) {
                 }
                 qmkusbConfigureHookI(&drivers.array[i].driver);
             }
+            /* Clear stale report so new host doesn't receive residual keys */
+            memset(&keyboard_report_sent, 0, sizeof(keyboard_report_sent));
+
             osalSysUnlockFromISR();
             if (last_suspend_state) {
                 usb_event_queue_enqueue(USB_EVENT_WAKEUP);

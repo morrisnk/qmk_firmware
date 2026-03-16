@@ -59,10 +59,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 tap_code(KC_RCTL);
                 wait_ms(100);
-                tap_code(KC_RCTL);
+                register_code(KC_RCTL);
                 wait_ms(100);
                 tap_code(KC_1);
-                wait_ms(200);
+                unregister_code(KC_RCTL);
                 clear_keyboard();
                 layer_move(_QWERTY);
             }
@@ -71,10 +71,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 tap_code(KC_RCTL);
                 wait_ms(100);
-                tap_code(KC_RCTL);
+                register_code(KC_RCTL);
                 wait_ms(100);
                 tap_code(KC_2);
-                wait_ms(200);
+                unregister_code(KC_RCTL);
                 clear_keyboard();
                 layer_move(_QWERTY);
             }
@@ -83,10 +83,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 tap_code(KC_RCTL);
                 wait_ms(100);
-                tap_code(KC_RCTL);
+                register_code(KC_RCTL);
                 wait_ms(100);
                 tap_code(KC_3);
-                wait_ms(200);
+                unregister_code(KC_RCTL);
                 clear_keyboard();
                 layer_move(_QWERTY_MAC);
             }
@@ -95,10 +95,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 tap_code(KC_RCTL);
                 wait_ms(100);
-                tap_code(KC_RCTL);
+                register_code(KC_RCTL);
                 wait_ms(100);
                 tap_code(KC_4);
-                wait_ms(200);
+                unregister_code(KC_RCTL);
                 clear_keyboard();
                 layer_move(_QWERTY);
             }
